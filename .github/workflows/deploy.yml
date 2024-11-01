@@ -22,7 +22,7 @@ jobs:
           echo "" > .env.local
           echo BASE_PATH=$BASE_PATH >> .env.local
       - name: Build
-        run: pnpm run build
+        run: npm run build
       - name: Prevent Jekyll build
         run: touch ./out/.nojekyll
       - name: Upload static files as artifact
