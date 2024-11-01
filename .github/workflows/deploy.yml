@@ -15,12 +15,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '22'
-      - name: Set Environment Variables
-        env:
-          BASE_PATH: ./
-        run: |
-          echo "" > .env.local
-          echo BASE_PATH=$BASE_PATH >> .env.local
       - name: Build
         run: npm install && npm run build
       - name: Prevent Jekyll build
